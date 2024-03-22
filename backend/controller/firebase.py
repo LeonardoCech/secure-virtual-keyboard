@@ -36,6 +36,7 @@ def sign_in_with_password(username, password, api_key, return_secure_token=False
                 return response.json()
             else:
                 if (response.text.find('TOO_MANY_ATTEMPTS') != -1):
+                    print('TOO_MANY_ATTEMPTS')
                     return None
                 # Se a requisição não foi bem-sucedida, imprime a mensagem de erro
                 print(f'SignInWithPassword ' + str(response.status_code) + ': ' + response.text)

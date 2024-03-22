@@ -12,7 +12,7 @@ client = TestClient(app)
 
 # TODO: Add more tests (for each error case)
 
-def test_api_v1_post_user_sign_in_200_1(api_v1_user_sign_in_base_user):
+def test_api_v1_post_user_sign_in_200_1(api_v1_user_sign_in):
     """
         Test the POST /user/sign/in endpoint with a valid request and expect a 200 OK response.
 
@@ -21,7 +21,7 @@ def test_api_v1_post_user_sign_in_200_1(api_v1_user_sign_in_base_user):
         :param api_v1_user_sign_in: The fixture for the API client and the necessary data for the request.
         :return: None
         """
-    endpoint = api_v1_user_sign_in_base_user.copy()
+    endpoint = api_v1_user_sign_in.copy()
 
     response = client.post(
         endpoint['route'],
