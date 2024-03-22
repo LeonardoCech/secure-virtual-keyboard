@@ -2,7 +2,7 @@
 name = "secure-virtual-keyboard"
 version = "0.1.0"
 description = ""
-authors = ["Leonardo Cech <leonardo.cech@we-bronx.io>"]
+authors = ["Leonardo Cech <leonardo.cech@catolicasc.edu.br>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

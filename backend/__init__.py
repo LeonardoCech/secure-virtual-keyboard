@@ -1,10 +1,3 @@
-# Copyright (c) 2023 Bronx Co. | we-bronx.io
-# This script is protected by copyright laws and cannot be reproduced, distributed,
-# or used without written permission of the copyright owner.
-
-# Contribuitors:
-# - Cech <leonardo.cech@we-bronx.io> | Full Stack Developer
-# - Braian <braian.zapelini@we-bronx.io> | Full Stack Developer
 
 # System Packages
 from fastapi.middleware.cors import CORSMiddleware
