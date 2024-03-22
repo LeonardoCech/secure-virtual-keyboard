@@ -1,0 +1,32 @@
+runtime: python311
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_idle_instances: 1
+  min_instances: 1
+  max_instances: 5
+  min_pending_latency: 30ms
+  max_pending_latency: automatic
+  max_concurrent_requests: 50
+
+
+inbound_services:
+- warmup
+
+#
+# env_variables:
+# DATABASE_PASSWORD: "trades"
+# DATABASE_HOST: "34.73.193.237"
+# DATABASE_PORT: "5432"
+# DATABASE_USERNAME: "postgres"
+# DATABASE_NAME: "postgres"
+# INSTANCE_CONNECTION_NAME: bronx-capital:us-east1:trades
+# GOOGLE_APPLICATION_CREDENTIALS: bronx-capital-7823a04c26bc.json
+# INSTANCE_UNIX_SOCKET: bronx-capital:us-east1:trades
+
+# 
+# env_variables:
+#   FIREBASE_AUTH: $FIREBASE_AUTH
+#   ORIGINS_IP: $ORIGINS_IP
+
+entrypoint: gunicorn -k uvicorn.workers.UvicornWorker __init__:app

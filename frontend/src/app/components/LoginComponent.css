@@ -1,0 +1,121 @@
+img {
+    -webkit-user-drag: none;
+}
+
+
+.titleLogin {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.custom-input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.custom-input:focus {
+    box-shadow: none;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-form {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-background {
+    flex: 1;
+    background-image: radial-gradient(circle, #bc4646 0%, #5c1111 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-background img {
+    height: 30vh;
+}
+
+.container {
+    width: 50%;
+}
+
+.buttonEnter {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 16px;
+}
+
+
+.buttonEnter:hover {
+    opacity: .75;
+}
+
+.buttonsPassword {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsPassword {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.buttonLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px;
+    height: 50px;
+    width: 60px;
+    transition: 200ms;
+}
+
+.buttonLogin:hover {
+    opacity: .75;
+}
+
+.button-row .rounded-pill {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.button-row .rounded-pill:last-child {
+    margin-right: 0;
+}
+
+#delete-icon {
+    filter: invert(1);
+}

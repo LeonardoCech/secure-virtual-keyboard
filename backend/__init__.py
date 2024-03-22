@@ -27,6 +27,8 @@ cred = credentials.Certificate(FIREBASE_CERTIFICATE_PATH)
 
 default_app = firebase_admin.initialize_app(cred)
 
+print(f'Firebase App: {default_app.project_id}')
+
 app = FastAPI(
     openapi_url='/openapi-schema.json',
     swagger_ui_parameters={
@@ -38,7 +40,7 @@ app = FastAPI(
 app.include_router(api_v1_user_router, prefix='/api/v1/user', tags=['User'])
 
 # origins = json.loads(os.environ.get("ORIGINS_IP"))
-origins = ["http://localhost"]
+origins = ["http://localhost", "http://localhost:4000", "http://127.0.0.1"]
 
 
 app.add_middleware(
