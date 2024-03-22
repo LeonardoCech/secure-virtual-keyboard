@@ -7,6 +7,20 @@ Este projeto foi desenvolvido pelos seguintes alunos de graduação de Eng. de S
 - Leonardo Cech ( leonardo.cech@catolicasc.edu.br )
 - Vinícius Henrique Bonazzoli Fogaça de Maria (vinicius.maria@catolicasc.edu.br)
 
+### Abordagem escolhida
+
+Foi discutido entre a equipe que para garantir maior segurança na autenticação de um usuário, é necessário que a senha não senha diretamente informada, já que isso seria um problema grave de segurança, por exemplo, ao enviar uma requisição via REST API contendo um JSON com usuário e senha, alguma entidade maliciosa poderia interceptar a requisição e ter acesso ao conteúdo.
+
+Então, a forma escolhida de não deixar a senha vulnerável foi a de passar um vetor criptografado com os números escolhidos pelo usuário, para que o servidor backend teste cada possibilidade.
+
+O serviço de autenticação tem um limite de requisições diária.
+
+Exemplo de senha informada:
+```
+[[0, 1], [2, 5], [7, 8]]
+```
+
+
 ### Backend
 
 Foram utilizadas as tecnologias Poetry, Uvicorn e FastAPI para o sistema desenvolvido.
